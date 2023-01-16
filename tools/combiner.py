@@ -16,7 +16,11 @@ def main():
         sys.exit(1)
 
     for filename in os.listdir(directory):
-        if filename.endswith(".json"):
+        if (
+            filename.endswith(".json")
+            and filename != "한글.json"
+            and filename != "all_data.json"
+        ):
             filepath = os.path.join(directory, filename)
             with open(filepath, "r") as f:
                 data = json.load(f)
