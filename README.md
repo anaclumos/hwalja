@@ -29,4 +29,9 @@
 
 ## 사용하는 서비스
 
-제게 이메일 혹은 PR을 주신다면 서비스에 추가해드리겠습니다.
+이메일 혹은 PR을 주신다면 서비스에 추가해드리겠습니다.
+
+- [anaclumos/sky-earth-human: iPhone을 위한 가장 익숙하고 친근한 천지인 키보드](https://github.com/anaclumos/sky-earth-human)
+
+
+
