@@ -20,6 +20,7 @@ def main():
             filename.endswith(".json")
             and filename != "한글.json"
             and filename != "all_data.json"
+            and filename != "한글.min.json"
         ):
             filepath = os.path.join(directory, filename)
             with open(filepath, "r") as f:
