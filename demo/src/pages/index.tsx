@@ -24,12 +24,8 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main className={styles.main}>
-        <div className={styles.formbox}>
-          <div className={styles.commentPlaceholder}>
-            <div id='comment' className={styles.textArea} placeholder='무슨 생각을 하고 계신가요?'>
-              {state}
-            </div>
-          </div>
+        <div className={styles.formbox} placeholder='무슨 생각을 하고 계신가요?'>
+          {state}
         </div>
         <div className={styles.keypad}>
           <Button

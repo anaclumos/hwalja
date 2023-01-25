@@ -5,7 +5,7 @@
   align-items: center;
   padding: 1rem;
   min-height: 100dvh;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
 }
 
 .keypad {
@@ -17,29 +17,30 @@
 }
 
 .key {
+  user-select: none;
   min-width: 2rem;
-  aspect-ratio: 1.6;
+  aspect-ratio: 1.8;
   background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   color: #555;
   cursor: pointer;
   font-size: 1.6rem;
   font-weight: 500;
-  line-height: 1.25;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
   padding: 0.5rem 1rem;
   transition: all 0.2s ease-in-out;
 }
 
 .key:hover {
-  background-color: #f5f5f5;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.19);
 }
 
 .key:active {
   background-color: #e8e8e8;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.19);
-  transform: translateY(5px);
+  transform: scale(0.95);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -50,53 +51,30 @@
   }
 
   .key:hover {
-    background-color: #2d3748;
+    background-color: #1a202c;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.19);
   }
-
   .key:active {
     background-color: #2d3748;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.19);
-    transform: translateY(5px);
+    transform: scale(0.95);
   }
 }
 
 .formbox {
   width: 100%;
   max-width: 30rem;
+  min-height: 3.3rem;
   margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
+  padding: 1rem;
   background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 @media (prefers-color-scheme: dark) {
   .formbox {
     background-color: #1a202c;
     border-color: #2d3748;
-  }
-}
-
-.textArea {
-  width: 100%;
-  min-height: 5rem;
-  word-wrap: break-word;
-  word-break: keep-all;
-  padding: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.25;
-  color: #555;
-  background-color: #fff;
-  border: 0;
-  resize: none;
-}
-
-.textArea:focus {
-  outline: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  .textArea {
-    background-color: #1a202c;
-    color: #fff;
   }
 }
