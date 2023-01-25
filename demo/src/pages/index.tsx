@@ -114,7 +114,7 @@ export default function Home() {
               if (isEditing) {
                 setIsEditing(false)
               } else {
-                changeState(state + ' , isEditing')
+                changeState(state + ' ')
               }
             }}
           />
