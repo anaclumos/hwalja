@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import Button from '@/components/Button'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { hwalja } from '@/data/hwalja'
 
 const type = (past_state: string, hwalja_map: any, pressed: string, isEditing: boolean) => {
@@ -13,22 +13,18 @@ const type = (past_state: string, hwalja_map: any, pressed: string, isEditing: b
 }
 
 const ipsum = () => {
-  const ipsums = [
-    '죽는 날까지 하늘을 우러러',
-    '한 점 부끄럼이 없기를',
-    '잎새에 이는 바람에도',
-    '나는 괴로워했다.',
-    '별을 노래하는 마음으로',
-    '모든 죽어 가는 것을 사랑해야지',
-    '그리고 나한테 주어진 길을 걸어가야겠다.',
-    '오늘 밤에도 별이 바람에 스치운다.',
-  ]
+  const ipsums = ['하늘을 우러러', '한 점 부끄럼이 없기를', '잎새에 이는 바람에도', '별을 노래하는 마음으로', '별이 바람에 스치운다']
   return ipsums[Math.floor(Math.random() * ipsums.length)]
 }
 
 export default function Home() {
-  const [state, changeState] = useState(ipsum())
+  const [state, changeState] = useState('')
   const [isEditing, setIsEditing] = useState(false)
+
+  useEffect(() => {
+    changeState(ipsum())
+  }, [])
+
   return (
     <>
       <Head>
@@ -109,6 +105,7 @@ export default function Home() {
             label='←'
             action={() => {
               changeState(state.slice(0, -1))
+              setIsEditing(false)
             }}
           />
           <Button

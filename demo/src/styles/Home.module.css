@@ -70,11 +70,34 @@
   border: 1px solid #ccc;
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.formbox::after {
+  content: '';
+  width: 2px;
+  height: 20px;
+  background: #111;
+  display: inline-block;
+  animation: cursor-blink 1.5s steps(2) infinite;
+  white-space: pre;
 }
 
 @media (prefers-color-scheme: dark) {
   .formbox {
     background-color: #1a202c;
     border-color: #2d3748;
+  }
+
+  .formbox::after {
+    background: #eee;
+  }
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
   }
 }
